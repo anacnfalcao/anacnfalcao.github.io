@@ -1,13 +1,97 @@
 <!doctype html>
-
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Ana Falcão</title>
-        <meta name="description" content="Ana Falcão Personal Website">
-        <meta name="author" content="Ana Falcão">
+        <meta name="description" content="Personal website for software engineer Ana Falcão. Ana Falcão resides in Portugal and is currently working on cross-platform mobile applications.">
+        <meta name="author" content="SitePoint">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://anacnfalcao.github.io/">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="main.css">
+        
     </head>
     <body>
-        Test1
+        <div class="scroll-container" id="scroll">
+            <section>
+                <div class="presentation">
+                    <div class="name">
+                        <h1>Ana Falcão</h1>
+                    </div>
+                    <div class="line"></div>
+                    <div class="short-description">
+                        <h2>Working on cross-platform mobile apps.</h2>
+                        <h2>Software Engineer based in Portugal</h2>
+                    </div>
+                    <div class="slow-show-up">
+                        <div class="scroll-down">↓</div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="image-container">
+                        <img src="images/ana-falcao.jpg" alt="Ana Falcão" class="mee">
+                    </div>
+                    <div>
+                        <h2 class="about-me">About me</h2>
+                        <h3 class="about-me-description">
+                            I'm passionate about working on cross-platform mobile applications and providing users with clear and interactive experiences. I'm currently working at Tillster as a software engineer in frontend.
+                            <br><br>
+                            I believe that the main key for success is communication and motivation. 
+                            <br><br>
+                            I have a master's degree in informatics engineering and graduated top of my class at the University of Coimbra.
+                            <br><br>
+                            Outside of working hours, you can find me shooting and editing photographs, working on some side projects, and learning about the world.
+                        </h3>
+                        <br><br><br>
+
+                        <div class="social-container">
+                            <a href="https://www.linkedin.com/in/anacnfalcao/" class="social-button"><img src="images/linkedin.svg" alt="linkedin" class="linkedin"></a>
+                            <a href="https://github.com/anacnfalcao" class="social-button"><img src="images/github.svg" alt="github" class="github"></a>
+                            <a href="mailto:anacnfalcao@gmail.com" class="social-button"><img src="images/email.svg" alt="email" class="email"></a>
+                            <a href="https://https://www.google.com/" class="social-button social-photos">CV</a>
+                            <a href="https://500px.com/p/anacnfalcao?view=photos" class="social-button social-photos"><img src="images/photographs.svg" alt="500px" class="photos"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+            const AppWrapper = document.getElementById('scroll');
+            const cards = document.querySelectorAll(".row");
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight;
+            }
+
+            function isCardVisible() {
+                for (card of cards) {
+                    isElementInViewport(card)
+                    ? card.classList.add("isVisible")
+                    : card.classList.remove("isVisible");
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", isCardVisible);
+            AppWrapper.addEventListener("scroll", isCardVisible);
+            window.addEventListener("resize", isCardVisible);
+        </script>
     </body>
+    <svg width="0" height="0">
+        <clipPath id="svgClip" clipPathUnits="objectBoundingBox">
+            <path d="M0.75815095,0.0579477769 C0.879893708,0.187288937 0.902165272,0.677587654 0.799370955,0.785996249 C0.627963035,0.966765889 0.26163708,0.91434951 0.111342491,0.755791573 C-0.0332137967,0.603287436 -0.035795248,0.382887577 0.0965066612,0.173955315 C0.200239457,0.0101396315 0.648923894,-0.0580965318 0.75815095,0.0579477769 Z"></path>
+        </clipPath>
+    </svg>
 </html>
