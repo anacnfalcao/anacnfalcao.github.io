@@ -31,6 +31,10 @@ section:first-child {
   background-color: #101010;
 }
 
+section:nth-child(2) {
+  min-height: 100vh;
+}
+
 .presentation {
   position: relative;
   top: 38%;
@@ -143,6 +147,8 @@ section:first-child {
   font-size: 24px;
   color: #101010;
   font-weight: 400;
+  font-weight: 200;
+  line-height: 36px;
 }
 
 .download-cv {
@@ -269,10 +275,11 @@ section:first-child {
   }
   .about-me-description {
     font-size: 18px;
+    line-height: 24px;
   }
   .social-container {
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 64px;
   }
 }
 
@@ -337,10 +344,11 @@ section:first-child {
   }
   .about-me-description {
     font-size: 18px;
+    line-height: 24px;
   }
   .social-container {
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 64px;
   }
 }
 
@@ -365,7 +373,6 @@ section:first-child {
     font-size: 32px;
     font-weight: 400;
   }
-  
   .scroll-down {
     margin-top: 200px;
     color: #DCDCDC;
@@ -391,9 +398,35 @@ section:first-child {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 1024px) and (min-width: 768px){
+  .name {
+    height: 62px;
+  }
+  .name > h1{
+    font-size: 62px;
+    line-height: 62px;
+  }
+  .short-description {
+    height: 70px;
+  }
+  .short-description > h2 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+  .presentation {
+    top: 35%;
+    left: 8%;
+  }
+  .scroll-container {
+    scroll-snap-type: none;
+  }
   .row {
+    flex-direction: column;
     padding-left: 5%;
     padding-right: 5%;
+  }
+  .social-container {
+    justify-content: center;
+    margin-bottom: 48px;
   }
 }
 
@@ -402,9 +435,7 @@ section:first-child {
   .presentation {
     top: 35%;
     left: 8%;
-   
   }
-
   .name {
     height: 72px;
   }
@@ -419,10 +450,20 @@ section:first-child {
   .short-description > h2 {
     font-size: 36px;
   } 
-  
+  .about-me-description {
+    font-size: 20px;
+    line-height: 28px;
+  }
   .scroll-down {
     margin-top: 120px;
     font-size: 24px;
+  }
+  .row {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .scroll-container {
+    scroll-snap-type: none;
   }
 }
  
