@@ -54,8 +54,7 @@
                             <br><br>
                             Outside of working hours, you can find me shooting and editing photographs, working on some side projects, and learning about the world.
                         </h3>
-                        <br><br><br>
-
+                        <br>
                         <div class="social-container">
                             <a href="https://www.linkedin.com/in/anacnfalcao/" class="social-button"><img src="images/linkedin.svg" alt="linkedin" class="linkedin"></a>
                             <a href="https://github.com/anacnfalcao" class="social-button"><img src="images/github.svg" alt="github" class="github"></a>
@@ -67,27 +66,7 @@
                 </div>
             </section>
         </div>
-        <script>
-            const AppWrapper = document.getElementById('scroll');
-            const cards = document.querySelectorAll(".row");
-
-            function isElementInViewport(el) {
-                const rect = el.getBoundingClientRect();
-                return rect.top < window.innerHeight;
-            }
-
-            function isCardVisible() {
-                for (card of cards) {
-                    isElementInViewport(card)
-                    ? card.classList.add("isVisible")
-                    : card.classList.remove("isVisible");
-                }
-            }
-
-            document.addEventListener("DOMContentLoaded", isCardVisible);
-            AppWrapper.addEventListener("scroll", isCardVisible);
-            window.addEventListener("resize", isCardVisible);
-        </script>
+        <script type="text/javascript" src="script.js"></script>
     </body>
     <svg width="0" height="0">
         <clipPath id="svgClip" clipPathUnits="objectBoundingBox">
