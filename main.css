@@ -40,6 +40,8 @@ section:nth-child(2) {
   top: 38%;
   left: 15%;
   width: fit-content;
+  width: -moz-max-content; 
+  width: -webkit-max-content;
 }
 
 .name {
